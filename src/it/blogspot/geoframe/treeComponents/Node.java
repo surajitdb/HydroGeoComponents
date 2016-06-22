@@ -25,7 +25,7 @@ import com.google.common.collect.FluentIterable;
 import com.google.common.collect.TreeTraverser;
 
 import it.blogspot.geoframe.Connections;
-import it.blogspot.geoframe.hydroGeoEntities.HydroGeoEntity;
+import it.blogspot.geoframe.hydroGeoEntities.area.HydroGeoArea;
 import it.blogspot.geoframe.hydroGeoEntities.point.HydroGeoPoint;
 import it.blogspot.geoframe.key.Key;
 
@@ -61,7 +61,7 @@ import net.jcip.annotations.ThreadSafe;
 public class Node extends Component {
 
     @GuardedBy("this") private Connections connKeys; //!< connections of the node
-    @GuardedBy("this") private HydroGeoEntity entity; //!<
+    @GuardedBy("this") private HydroGeoArea entity; //!<
     @GuardedBy("this") private TreeTraverser<Component> traverser; //!< traverser object
     @GuardedBy("this") private final HashMap<Key, Boolean> readyForSim
         = new HashMap<Key, Boolean>(); //!< <code>HashMap</code> of flags for start sim
@@ -72,7 +72,7 @@ public class Node extends Component {
      * @param[in] connKeys The connection of the node
      * @param[in] entity The type of entity of the node
      */
-    public Node(final Connections connKeys, final HydroGeoEntity entity) {
+    public Node(final Connections connKeys, final HydroGeoArea entity) {
         getInstance(connKeys, entity);
     }
 
@@ -170,7 +170,7 @@ public class Node extends Component {
      *
      * @see Component#getEntity()
      */
-    public synchronized HydroGeoEntity getEntity() {
+    public synchronized HydroGeoArea getEntity() {
         return entity;
     }
 
@@ -229,7 +229,7 @@ public class Node extends Component {
      * @param[in] connKeys The connections of the node
      * @param[in] entity The entity of the node
      */
-    private void getInstance(final Connections connKeys, final HydroGeoEntity entity) {
+    private void getInstance(final Connections connKeys, final HydroGeoArea entity) {
 
         if (statesAreNull()) {
             synchronized(this) {

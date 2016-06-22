@@ -24,7 +24,7 @@ import com.google.common.collect.FluentIterable;
 import com.google.common.collect.TreeTraverser;
 
 import it.blogspot.geoframe.Connections;
-import it.blogspot.geoframe.hydroGeoEntities.HydroGeoEntity;
+import it.blogspot.geoframe.hydroGeoEntities.area.HydroGeoArea;
 import it.blogspot.geoframe.hydroGeoEntities.point.HydroGeoPoint;
 
 import net.jcip.annotations.GuardedBy;
@@ -58,7 +58,7 @@ import net.jcip.annotations.ThreadSafe;
 public class Leaf extends Component {
 
     @GuardedBy("this") private Connections connKeys; //!< connections of the node
-    @GuardedBy("this") private HydroGeoEntity entity; //!<
+    @GuardedBy("this") private HydroGeoArea entity; //!<
     @GuardedBy("this") private TreeTraverser<Component> traverser; //!< traverser object
 
     /**
@@ -67,7 +67,7 @@ public class Leaf extends Component {
      * @param[in] connKeys The connection of the node
      * @param[in] entity The entity of the node
      */
-    public Leaf(final Connections connKeys, final HydroGeoEntity entity) {
+    public Leaf(final Connections connKeys, final HydroGeoArea entity) {
         getInstance(connKeys, entity);
     }
 
@@ -144,7 +144,7 @@ public class Leaf extends Component {
      *
      * @see Component#getEntity()
      */
-    public synchronized HydroGeoEntity getEntity() {
+    public synchronized HydroGeoArea getEntity() {
         return entity;
     }
 
@@ -200,7 +200,7 @@ public class Leaf extends Component {
      * @param[in] connKeys The connections of the node
      * @param[in] entity The entity of node
      */
-    private void getInstance(final Connections connKeys, final HydroGeoEntity entity) {
+    private void getInstance(final Connections connKeys, final HydroGeoArea entity) {
 
         if (statesAreNull()) {
             synchronized(this) {

@@ -25,7 +25,7 @@ import org.geotools.graph.util.geom.Coordinate2D;
 import com.google.common.collect.TreeTraverser;
 
 import it.blogspot.geoframe.Connections;
-import it.blogspot.geoframe.hydroGeoEntities.HydroGeoEntity;
+import it.blogspot.geoframe.hydroGeoEntities.area.HydroGeoArea;
 import it.blogspot.geoframe.hydroGeoEntities.point.HydroGeoPoint;
 import it.blogspot.geoframe.key.Key;
 
@@ -128,7 +128,7 @@ public abstract class Component {
      *
      * @return The entity of the node
      */
-    abstract public HydroGeoEntity getEntity();
+    abstract public HydroGeoArea getEntity();
 
     /**
      * @brief Set the traverser of the tree
