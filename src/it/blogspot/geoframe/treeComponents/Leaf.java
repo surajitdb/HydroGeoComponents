@@ -142,6 +142,15 @@ public class Leaf extends Component {
     /**
      * {@inheritDoc}
      *
+     * @see Component#getEntity()
+     */
+    public synchronized HydroGeoEntity getEntity() {
+        return entity;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
      * @see Component#setTraverser(final BinaryTreeTraverser<Component>)
      */
     public synchronized void setTraverser(final TreeTraverser<Component> traverser) {

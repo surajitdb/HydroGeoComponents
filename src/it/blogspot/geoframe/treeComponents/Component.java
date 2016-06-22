@@ -25,6 +25,7 @@ import org.geotools.graph.util.geom.Coordinate2D;
 import com.google.common.collect.TreeTraverser;
 
 import it.blogspot.geoframe.Connections;
+import it.blogspot.geoframe.hydroGeoEntities.HydroGeoEntity;
 import it.blogspot.geoframe.hydroGeoEntities.point.HydroGeoPoint;
 import it.blogspot.geoframe.key.Key;
 
@@ -121,6 +122,13 @@ public abstract class Component {
      * @return The coordinate of the ending point
      */
     abstract public HydroGeoPoint getEndPoint();
+
+    /**
+     * @brief Get the entity of the node
+     *
+     * @return The entity of the node
+     */
+    abstract public HydroGeoEntity getEntity();
 
     /**
      * @brief Set the traverser of the tree
