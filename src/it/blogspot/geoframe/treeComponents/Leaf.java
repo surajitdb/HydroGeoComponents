@@ -58,7 +58,6 @@ import net.jcip.annotations.ThreadSafe;
 public class Leaf extends Component {
 
     @GuardedBy("this") private Connections connKeys; //!< connections of the node
-    @GuardedBy("this") private Integer layer; //!< layer in the tree in which this node is located
     @GuardedBy("this") private HydroGeoEntity entity; //!<
     @GuardedBy("this") private TreeTraverser<Component> traverser; //!< traverser object
 
@@ -66,12 +65,10 @@ public class Leaf extends Component {
      * @brief Constructor
      *
      * @param[in] connKeys The connection of the node
-     * @param[in] layer The layer of the node in the tree
-     * @param[in] startPoint The starting point of the stream in the sub-basin
-     * @param[in] endPoint The closure point of the sub-basin
+     * @param[in] entity The entity of the node
      */
-    public Leaf(final Connections connKeys, final Integer layer, final HydroGeoEntity entity) {
-        getInstance(connKeys, layer, entity);
+    public Leaf(final Connections connKeys, final HydroGeoEntity entity) {
+        getInstance(connKeys, entity);
     }
 
     /**
@@ -122,25 +119,6 @@ public class Leaf extends Component {
      */
     public synchronized Connections getConnections() {
         return connKeys;
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @see Component#setLayer(final int)
-     */
-    public synchronized void setLayer(final int layer) {
-        validateLayer(layer); // precondition
-        this.layer = layer;
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @see Component#getLayer()
-     */
-    public synchronized Integer getLayer() {
-        return new Integer(layer);
     }
 
     /**
@@ -202,7 +180,6 @@ public class Leaf extends Component {
         String tmp = this.getClass().getSimpleName();
         tmp += "       ==> ";
         tmp += connKeys.toString();
-        tmp += " - Layer = " + layer;
 
         return tmp;
 
@@ -212,17 +189,14 @@ public class Leaf extends Component {
      * @brief Allocation of the states of the class
      *
      * @param[in] connKeys The connections of the node
-     * @param[in] layer The layer of the node in the tree
-     * @param[in] startPoint The starting point of the stream in the sub-basin
-     * @param[in] endPoint The closure point of the sub-basin
+     * @param[in] entity The entity of node
      */
-    private void getInstance(final Connections connKeys, final Integer layer, final HydroGeoEntity entity) {
+    private void getInstance(final Connections connKeys, final HydroGeoEntity entity) {
 
         if (statesAreNull()) {
             synchronized(this) {
                 if (statesAreNull()) {
                     this.connKeys = connKeys;
-                    this.layer = new Integer(layer);
                     this.entity = entity;
 
                     validateState(); // precondition
@@ -242,7 +216,6 @@ public class Leaf extends Component {
     protected boolean statesAreNull() {
 
         if (this.connKeys == null &&
-            this.layer == null &&
             this.entity == null) return true;
 
         return false;
@@ -257,7 +230,6 @@ public class Leaf extends Component {
     protected void validateState() {
 
         validateConnections(connKeys);
-        validateLayer(layer);
 
     }
 

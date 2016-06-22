@@ -61,7 +61,6 @@ import net.jcip.annotations.ThreadSafe;
 public class LocalNode extends Component {
 
     @GuardedBy("this") private Connections connKeys; //!< connections of the node
-    @GuardedBy("this") private Integer layer; //!< layer in the tree in which this node is located
     @GuardedBy("this") private HydroGeoEntity entity; //!<
     @GuardedBy("this") private TreeTraverser<Component> traverser; //!< traverser object
     @GuardedBy("this") private final HashMap<Key, Boolean> readyForSim
@@ -145,25 +144,6 @@ public class LocalNode extends Component {
     /**
      * {@inheritDoc}
      *
-     * @see Component#setLayer(final int)
-     */
-    public synchronized void setLayer(final int layer) {
-        validateLayer(layer); // precondition
-        this.layer = layer;
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @see Component#getLayer()
-     */
-    public synchronized Integer getLayer() {
-        return new Integer(layer);
-    }
-
-    /**
-     * {@inheritDoc}
-     *
      * @see Component#getStartPoint()
      */
     public synchronized HydroGeoPoint getStartPoint() {
@@ -239,7 +219,6 @@ public class LocalNode extends Component {
         String tmp = this.getClass().getSimpleName();
         tmp += "  ==> ";
         tmp += connKeys.toString();
-        tmp += " - Layer = " + layer;
 
         return tmp;
 
@@ -261,7 +240,6 @@ public class LocalNode extends Component {
             synchronized(this) {
                 if (statesAreNull()) {
                     this.connKeys = connKeys;
-                    this.layer = new Integer(layer);
                     this.entity = entity;
 
                     validateState(); // precondition
@@ -280,7 +258,6 @@ public class LocalNode extends Component {
     protected boolean statesAreNull() {
 
         if (this.connKeys == null &&
-            this.layer == null &&
             this.entity == null) return true;
 
         return false;
@@ -295,7 +272,6 @@ public class LocalNode extends Component {
     protected void validateState() {
 
         validateConnections(connKeys);
-        validateLayer(layer);
 
     }
 

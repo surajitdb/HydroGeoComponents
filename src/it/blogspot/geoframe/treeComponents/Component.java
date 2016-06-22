@@ -97,20 +97,6 @@ public abstract class Component {
     public abstract Connections getConnections();
 
     /**
-     * @brief Set the <tt>layer</tt> of the node
-     *
-     * @param[in] layer The <tt>layer</tt> of the node in the tree
-     */
-    abstract public void setLayer(final int layer);
-
-    /**
-     * @brief Get the <tt>layer</tt> of the node
-     *
-     * @return The <tt>layer</tt> of the node in the tree
-     */
-    abstract public Integer getLayer();
-
-    /**
      * @brief Get the coordinate of the starting point
      *
      * @todo check if this method returns the desired object

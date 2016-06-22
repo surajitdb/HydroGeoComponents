@@ -61,7 +61,6 @@ import net.jcip.annotations.ThreadSafe;
 public class Node extends Component {
 
     @GuardedBy("this") private Connections connKeys; //!< connections of the node
-    @GuardedBy("this") private Integer layer; //!< layer in the tree in which this node is located
     @GuardedBy("this") private HydroGeoEntity entity; //!<
     @GuardedBy("this") private TreeTraverser<Component> traverser; //!< traverser object
     @GuardedBy("this") private final HashMap<Key, Boolean> readyForSim
@@ -71,12 +70,10 @@ public class Node extends Component {
      * @brief Constructor
      *
      * @param[in] connKeys The connection of the node
-     * @param[in] layer The layer of the node in the tree
-     * @param[in] startPoint The starting point of the stream
-     * @param[in] endPoint The closure point of the sub-basin
+     * @param[in] entity The type of entity of the node
      */
-    public Node(final Connections connKeys, final Integer layer, final HydroGeoEntity entity) {
-        getInstance(connKeys, layer, entity);
+    public Node(final Connections connKeys, final HydroGeoEntity entity) {
+        getInstance(connKeys, entity);
     }
 
     /**
@@ -153,25 +150,6 @@ public class Node extends Component {
     /**
      * {@inheritDoc}
      *
-     * @see Component#setLayer(final int)
-     */
-    public synchronized void setLayer(final int layer) {
-        validateLayer(layer); // precondition
-        this.layer = layer;
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @see Component#getLayer()
-     */
-    public synchronized Integer getLayer() {
-        return new Integer(layer);
-    }
-
-    /**
-     * {@inheritDoc}
-     *
      * @see Component#getStartPoint()
      */
     public synchronized HydroGeoPoint getStartPoint() {
@@ -228,7 +206,6 @@ public class Node extends Component {
         String tmp = this.getClass().getSimpleName();
         tmp += "       ==> ";
         tmp += connKeys.toString();
-        tmp += " - Layer = " + layer;
 
         return tmp;
 
@@ -241,17 +218,14 @@ public class Node extends Component {
      * @description Double-checked locking
      *
      * @param[in] connKeys The connections of the node
-     * @param[in] layer The layer of the node in the tree
-     * @param[in] startPoint The starting point of the stream in the sub-basin
-     * @param[in] endPoint The closure point of the sub-basin
+     * @param[in] entity The entity of the node
      */
-    private void getInstance(final Connections connKeys, final Integer layer, final HydroGeoEntity entity) {
+    private void getInstance(final Connections connKeys, final HydroGeoEntity entity) {
 
         if (statesAreNull()) {
             synchronized(this) {
                 if (statesAreNull()) {
                     this.connKeys = connKeys;
-                    this.layer = new Integer(layer);
                     this.entity = entity;
 
                     validateState(); // precondition
@@ -270,7 +244,6 @@ public class Node extends Component {
     protected boolean statesAreNull() {
 
         if (this.connKeys == null &&
-            this.layer == null &&
             this.entity == null) return true;
 
         return false;
@@ -285,7 +258,6 @@ public class Node extends Component {
     protected void validateState() {
 
         validateConnections(connKeys);
-        validateLayer(layer);
 
     }
 
