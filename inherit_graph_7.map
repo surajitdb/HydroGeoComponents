@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1HydroGeoEntity.html" title="HydroGeoEntity" alt="" coords="5,183,120,209"/>
+<area shape="rect" id="node2" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1HydroGeoArea.html" title="HydroGeoArea" alt="" coords="169,81,277,108"/>
+<area shape="rect" id="node6" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1HydroGeoLine.html" title="HydroGeoLine" alt="" coords="171,183,276,209"/>
+<area shape="rect" id="node9" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1HydroGeoPoint.html" title="HydroGeoPoint" alt="" coords="168,259,279,285"/>
+<area shape="rect" id="node3" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1Basin.html" title="Basin" alt="" coords="367,5,421,32"/>
+<area shape="rect" id="node4" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1DrainageArea.html" title="DrainageArea" alt="" coords="343,56,445,83"/>
+<area shape="rect" id="node5" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1GhostBasin.html" title="GhostBasin" alt="" coords="349,107,439,133"/>
+<area shape="rect" id="node7" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1Pipe.html" title="Pipe" alt="" coords="370,157,418,184"/>
+<area shape="rect" id="node8" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1River.html" title="River" alt="" coords="367,208,421,235"/>
+<area shape="rect" id="node10" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1Hydrometer.html" title="Hydrometer" alt="" coords="349,259,439,285"/>
+<area shape="rect" id="node11" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1InspectionChamber.html" title="InspectionChamber" alt="" coords="327,309,461,336"/>
+</map>

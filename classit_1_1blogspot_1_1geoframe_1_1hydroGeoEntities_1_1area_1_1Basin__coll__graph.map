@@ -1,0 +1,7 @@
+<map id="Basin" name="Basin">
+<area shape="rect" id="node2" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1HydroGeoArea.html" title="HydroGeoArea" alt="" coords="5,133,113,160"/>
+<area shape="rect" id="node3" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1HydroGeoEntity.html" title="HydroGeoEntity" alt="" coords="85,5,199,32"/>
+<area shape="rect" id="node5" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1HydroGeoLine.html" title="HydroGeoLine" alt="" coords="89,81,195,108"/>
+<area shape="rect" id="node6" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1HydroGeoPoint.html" title="HydroGeoPoint" alt="" coords="219,81,329,108"/>
+<area shape="rect" id="node4" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1River.html" title="River" alt="" coords="115,185,169,212"/>
+</map>

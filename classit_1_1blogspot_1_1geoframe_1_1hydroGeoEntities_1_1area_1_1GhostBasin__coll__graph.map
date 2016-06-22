@@ -1,0 +1,5 @@
+<map id="GhostBasin" name="GhostBasin">
+<area shape="rect" id="node2" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1HydroGeoArea.html" title="HydroGeoArea" alt="" coords="5,81,113,108"/>
+<area shape="rect" id="node3" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1HydroGeoEntity.html" title="HydroGeoEntity" alt="" coords="81,5,195,32"/>
+<area shape="rect" id="node4" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1HydroGeoPoint.html" title="HydroGeoPoint" alt="" coords="137,81,248,108"/>
+</map>

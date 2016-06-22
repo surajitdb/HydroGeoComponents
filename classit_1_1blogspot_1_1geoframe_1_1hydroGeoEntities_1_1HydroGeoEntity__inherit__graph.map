@@ -1,0 +1,12 @@
+<map id="HydroGeoEntity" name="HydroGeoEntity">
+<area shape="rect" id="node2" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1HydroGeoArea.html" title="HydroGeoArea" alt="" coords="141,80,249,107"/>
+<area shape="rect" id="node6" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1HydroGeoLine.html" title="HydroGeoLine" alt="" coords="315,80,420,107"/>
+<area shape="rect" id="node9" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1HydroGeoPoint.html" title="HydroGeoPoint" alt="" coords="464,80,575,107"/>
+<area shape="rect" id="node3" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1Basin.html" title="Basin" alt="" coords="5,155,60,181"/>
+<area shape="rect" id="node4" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1DrainageArea.html" title="DrainageArea" alt="" coords="85,155,186,181"/>
+<area shape="rect" id="node5" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1area_1_1GhostBasin.html" title="GhostBasin" alt="" coords="210,155,301,181"/>
+<area shape="rect" id="node7" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1Pipe.html" title="Pipe" alt="" coords="325,155,373,181"/>
+<area shape="rect" id="node8" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1River.html" title="River" alt="" coords="397,155,450,181"/>
+<area shape="rect" id="node10" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1Hydrometer.html" title="Hydrometer" alt="" coords="474,155,565,181"/>
+<area shape="rect" id="node11" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1InspectionChamber.html" title="InspectionChamber" alt="" coords="589,155,724,181"/>
+</map>

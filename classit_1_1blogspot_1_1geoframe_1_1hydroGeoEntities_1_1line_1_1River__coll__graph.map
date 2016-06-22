@@ -1,0 +1,5 @@
+<map id="River" name="River">
+<area shape="rect" id="node2" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1line_1_1HydroGeoLine.html" title="HydroGeoLine" alt="" coords="5,81,111,108"/>
+<area shape="rect" id="node3" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1HydroGeoEntity.html" title="HydroGeoEntity" alt="" coords="78,5,193,32"/>
+<area shape="rect" id="node4" href="$classit_1_1blogspot_1_1geoframe_1_1hydroGeoEntities_1_1point_1_1HydroGeoPoint.html" title="HydroGeoPoint" alt="" coords="135,81,245,108"/>
+</map>
