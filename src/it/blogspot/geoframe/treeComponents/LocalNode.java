@@ -182,7 +182,7 @@ public class LocalNode extends Component {
     /**
      * @brief Returns the coordinates of the point
      *
-     * @TODO: is getStartPoint correct for this class?
+     * @todo is getStartPoint correct for this class?
      *
      * @description Component#getStartPoint() and Component#getEndPoint() have
      *              been implemented because of the necessity of a sort of

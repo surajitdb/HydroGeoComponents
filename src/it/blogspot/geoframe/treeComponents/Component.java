@@ -113,7 +113,7 @@ public abstract class Component {
     /**
      * @brief Get the coordinate of the starting point
      *
-     * @TODO: check if this method returns the desired object
+     * @todo check if this method returns the desired object
      *
      * @description Each node of the tree can be identified with a starting
      *              point and an ending point. In the case of a sub-basin they
@@ -154,7 +154,7 @@ public abstract class Component {
      * @brief Compute the <strong>Preorder</strong> <code>List</code> of nodes
      *        in the subtree with <tt>this</tt> as main vertex
      *
-     * @TODO: return an HashMap of Key, HydroGeoEntity
+     * @todo return an HashMap of Key, HydroGeoEntity
      * @return The <strong>Preorder</strong> <code>List</code> of nodes
      */
     abstract public List<Component> preOrderTraversal();
@@ -163,7 +163,7 @@ public abstract class Component {
      * @brief Compute the <strong>Postorder</strong> <code>List</code> of nodes
      *        in the subtree with <tt>this</tt> as main vertex
      *
-     * @TODO: return an HashMap of Key, HydroGeoEntity
+     * @todo return an HashMap of Key, HydroGeoEntity
      * @return The <strong>Postorder</strong> <code>List</code> of nodes
      */
     abstract public List<Component> postOrderTraversal();
